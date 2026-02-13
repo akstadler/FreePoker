@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <UseWPF>true</UseWPF>
+        <RootNamespace>FreePoker.WPF</RootNamespace>
+        <AssemblyName>FreePoker.WPF</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\FreePoker.Application\FreePoker.Application.csproj" />
+        <ProjectReference Include="..\FreePoker.Infrastructure\FreePoker.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>
