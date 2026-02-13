@@ -14,6 +14,11 @@ namespace FreePoker.Domain
         public DateTime CreatedAt { get; set; }
         public DateTime? StartedAt { get; set; }
         public DateTime? EndedAt { get; set; }
+        public int startingStack { get; set; }
+        public int blindLevelDuration { get; set; }
+        public int blindLevelIncrement { get; set; }
+        public int currentBlindLevel { get; set; }
+
 
         public Tournament()
         {
