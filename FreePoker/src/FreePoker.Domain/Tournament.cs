@@ -9,20 +9,27 @@ namespace FreePoker.Domain
     public class Tournament
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime? StartedAt { get; set; }
-        public DateTime? EndedAt { get; set; }
+        public required string Name { get; set; }
+        public int PlayersCount { get; set; }
         public int startingStack { get; set; }
         public int blindLevelDuration { get; set; }
-        public int blindLevelIncrement { get; set; }
-        public int currentBlindLevel { get; set; }
+        public int bigBlindLevelIncrement { get; set; }
+        public int smallBlindLevelIncrement { get; set; }
 
 
         public Tournament()
         {
-            CreatedAt = DateTime.UtcNow;
+        }
+
+        public Tournament(int id, string name, int playersCount, int startingStack, int blindLevelDuration, int bigBlindLevelIncrement, int smallBlindLevelIncrement)
+        {
+            Id = id;
+            Name = name;
+            PlayersCount = playersCount;
+            this.startingStack = startingStack;
+            this.blindLevelDuration = blindLevelDuration;
+            this.bigBlindLevelIncrement = bigBlindLevelIncrement;
+            this.smallBlindLevelIncrement = smallBlindLevelIncrement;
         }
     }
 }

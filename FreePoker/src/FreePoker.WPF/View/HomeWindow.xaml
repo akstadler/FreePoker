@@ -5,26 +5,39 @@
     WindowStartupLocation="CenterScreen"
     Background="#1a1a1a">
     <Grid>
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-        <TextBlock Text="Welcome to Free Poker" 
-               FontSize="32" 
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Width="400">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Free Poker Tournament Timer" 
+               FontSize="28" 
                Foreground="White" 
                HorizontalAlignment="Center" 
-               Margin="0,0,0,20"/>
-        <Button Content="New Game" 
-            Padding="20,10" 
-            FontSize="16" 
-            HorizontalAlignment="Center" 
-            Margin="0,0,0,10"/>
-        <Button Content="Join Game" 
-            Padding="20,10" 
-            FontSize="16" 
-            HorizontalAlignment="Center" 
-            Margin="0,0,0,10"/>
-        <Button Content="Settings" 
-            Padding="20,10" 
-            FontSize="16" 
-            HorizontalAlignment="Center"/>
-    </StackPanel>
+               Margin="0,0,0,20" Grid.Row="0"/>
+        <Button x:Name="NewProfileButton"
+                Content="Create New Profile"
+                Padding="10"
+                FontSize="16"
+                Margin="0,5" 
+                Style="{StaticResource AccentButtonStyle}"
+                Grid.Row="1"/>
+        <Button x:Name="LoadProfileButton"
+                Content="Load Existing Profile"
+                Padding="10"
+                FontSize="16"
+                Margin="0,5" 
+                Style="{StaticResource AccentButtonStyle}"
+                Grid.Row="2"/>
+        <Button x:Name="BeginTournamentButton"
+                Content="Begin Tournament"
+                Padding="10"
+                FontSize="16"
+                Margin="0,5" 
+                Style="{StaticResource AccentButtonStyle}"
+                Grid.Row="3"/>
+    </Grid>
     </Grid>
 </Window>
