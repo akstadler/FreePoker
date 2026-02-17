@@ -1,12 +1,16 @@
 namespace FreePoker.Domain
 {
-    public class Round
+    public class Round : ITournamentSegment
     {
         public int RoundNumber { get; set; }
         public decimal SmallBlind { get; set; }
         public decimal BigBlind { get; set; }
         public decimal Ante { get; set; }
         public int DurationInMinutes { get; set; }
+
+        public int durationInMinutes => throw new NotImplementedException();
+
+        public TournamentSegment SegmentType => throw new NotImplementedException();
 
         public Round()
         {
